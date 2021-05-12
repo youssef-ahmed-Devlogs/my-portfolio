@@ -275,7 +275,7 @@ header .list-links li a:hover::after {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
   .home__content {
     grid-template-columns: 1fr;
   }
@@ -285,7 +285,7 @@ header .list-links li a:hover::after {
   }
 
   .home__img {
-    max-width: 300px;
+    width: 300px;
   }
 }
 

@@ -314,6 +314,9 @@ header .list-links li a:hover::after {
 }
 
 @media (max-width: 1200px) {
+  .about__content {
+    grid-template-columns: 1fr;
+  }
   .about__info {
     text-align: center;
   }

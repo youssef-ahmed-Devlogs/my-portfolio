@@ -27,6 +27,7 @@ function showActions() {
 const links = document.querySelectorAll(".list-links a");
 links.forEach((link) => link.addEventListener("click", showActions));
 
+// SCROLL REVEAL ANIMATION
 const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
@@ -34,7 +35,16 @@ const sr = ScrollReveal({
   reset: true,
 });
 
+// HOME SCROLL REVEAL
 sr.reveal(".home__title", {});
 sr.reveal(".button", { delay: 200 });
 sr.reveal(".home__img", { delay: 400 });
 sr.reveal(".home__social a", { interval: 200 });
+
+// ABOUT SCROLL REVEAL
+sr.reveal(".about__img", {});
+sr.reveal(".about__info", { delay: 200 });
+
+// SKILLS SCROLL REVEAL
+sr.reveal(".skills__progress", { interval: 200 });
+sr.reveal(".skills__img", { delay: 200 });

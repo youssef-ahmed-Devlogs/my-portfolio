@@ -64,6 +64,7 @@ body {
   font-size: var(--normal-font-size);
   margin-top: 58px !important;
   color: var(--second-color);
+  height: 5000px !important;
 }
 
 .container {
@@ -299,9 +300,11 @@ header .list-links li a:hover::after {
 
 .about__img {
   max-width: 300px;
-  border-radius: 0.5rem;
-  overflow: hidden;
   margin: 0 auto;
+}
+
+.about__img img {
+  border-radius: 0.5rem;
 }
 
 .about__title {
@@ -319,6 +322,99 @@ header .list-links li a:hover::after {
   }
   .about__info {
     text-align: center;
+  }
+}
+
+/* ==== SKILLS ==== */
+.skills__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.skills__progress {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.skills__progress:not(:last-child) {
+  margin-bottom: var(--m-2);
+}
+
+.skills__progress::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--first-color);
+  height: 5px;
+  border-radius: 0.5rem;
+}
+
+.skills__html::after {
+  width: 90%;
+}
+
+.skills__css::after {
+  width: 65%;
+}
+
+.skills__javascript::after {
+  width: 70%;
+}
+
+.skills__reactjs::after {
+  width: 60%;
+}
+
+.skills__jquery::after {
+  width: 60%;
+}
+
+.skills__bootstrap::after {
+  width: 75%;
+}
+
+.skills__sass::after {
+  width: 60%;
+}
+
+.skills__apis::after {
+  width: 70%;
+}
+
+.skills__git::after {
+  width: 70%;
+}
+
+.skills__progress-skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills__progress-skill i {
+  font-size: 2rem;
+  margin-right: var(--m-1);
+  color: var(--second-color);
+}
+
+.skills__name {
+  display: flex;
+  align-items: center;
+}
+
+.skills__img img {
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 550px) {
+  .skills__content {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -373,32 +469,28 @@ img {
   position: relative;
   font-size: var(--big-font-size);
   color: var(--light-color);
-  margin-top: var(--m-2);
-  margin-bottom: var(--m-4);
+  margin: var(--m-6) auto var(--m-6) auto;
   text-align: center;
   max-width: fit-content;
-  margin: 0 auto;
-  opacity: 0.5;
-  margin-bottom: 80px;
+  opacity: 0.6;
   background-color: var(--first-color);
   padding: 0 20px 0 8px;
-  border-radius: 0 0 2.4rem 0;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
-  width: 4px;
+  width: 5px;
   height: 100%;
   border-radius: 0.5rem;
   bottom: 0;
-  left: -8px;
+  left: -10px;
   background-color: var(--first-color);
 }
 
 .section {
-  padding-top: 7rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 992px) {

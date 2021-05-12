@@ -51,6 +51,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -222,18 +224,24 @@ header .list-links li a:hover::after {
 
 /* ==== HOME ==== */
 .home {
-  max-height: 100vh;
+  height: 100vh;
+  position: relative;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .home__content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   align-items: center;
+  gap: 20px;
 }
 
 .home__title {
   font-size: var(--big-font-size);
   line-height: 1.5;
+  margin: 0;
 }
 
 .home__title span {
@@ -248,7 +256,7 @@ header .list-links li a:hover::after {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: 3rem;
   left: 0;
 }
 
@@ -267,9 +275,9 @@ header .list-links li a:hover::after {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .home__content {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .home__social {
@@ -281,6 +289,36 @@ header .list-links li a:hover::after {
   }
 }
 
+/* ==== ABOUT ==== */
+.about__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  align-items: center;
+  gap: 30px;
+}
+
+.about__img {
+  max-width: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--m-1);
+}
+
+.about__desc {
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .about__info {
+    text-align: center;
+  }
+}
+
 /* ==== CSS CLASESS ==== */
 a {
   text-decoration: none;
@@ -289,6 +327,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .button {
@@ -326,28 +368,34 @@ ul {
 
 .section-title {
   position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
+  font-size: var(--big-font-size);
+  color: var(--light-color);
   margin-top: var(--m-2);
   margin-bottom: var(--m-4);
   text-align: center;
+  max-width: fit-content;
+  margin: 0 auto;
+  opacity: 0.5;
+  margin-bottom: 80px;
+  background-color: var(--first-color);
+  padding: 0 20px 0 8px;
+  border-radius: 0 0 2.4rem 0;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
-  width: 64px;
-  height: 0.18rem;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  margin: auto;
+  width: 4px;
+  height: 100%;
+  border-radius: 0.5rem;
+  bottom: 0;
+  left: -8px;
   background-color: var(--first-color);
 }
 
 .section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 992px) {

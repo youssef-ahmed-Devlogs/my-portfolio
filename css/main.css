@@ -262,19 +262,22 @@ header .list-links li a:hover::after {
 }
 
 @media (max-width: 1200px) {
-  /* .home__content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  } */
-
   .home__img {
     margin: 0 auto;
   }
 }
 
 @media (max-width: 500px) {
+  .home__content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
   .home__social {
     position: static;
+  }
+
+  .home__img {
+    max-width: 300px;
   }
 }
 

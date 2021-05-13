@@ -51,3 +51,29 @@ sr.reveal(".skills__img", { delay: 200 });
 
 // PORTFOLIO SCROLL REVEAL
 sr.reveal(".portfolio__box", { interval: 200 });
+
+// DARK MODE SETTINGS
+let modeToggle = document.getElementById("dark-mode-toggle");
+let dark_on = localStorage.getItem("dark_on")
+  ? JSON.parse(localStorage.getItem("dark_on"))
+  : false;
+let dark = "#0e2431";
+let light = "#fff";
+
+const setMode = (colorLight, colorDark, darkOn) => {
+  document.documentElement.style.setProperty("--second-color", colorLight);
+  document.documentElement.style.setProperty("--light-color", colorDark);
+  dark_on = darkOn;
+  localStorage.setItem("dark_on", dark_on);
+};
+
+modeToggle.addEventListener("click", (e) => {
+  dark_on ? setMode(dark, light, false) : setMode(light, dark, true);
+  e.target.classList.toggle("bxs-sun");
+});
+
+// SET MODE AFTER RELOAD PAGE FROM LOCAL STORAGE
+if (dark_on) {
+  setMode(light, dark, true);
+  modeToggle.classList.toggle("bxs-sun");
+}

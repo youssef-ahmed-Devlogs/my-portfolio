@@ -64,6 +64,7 @@ body {
   font-size: var(--normal-font-size);
   margin-top: 58px !important;
   color: var(--second-color);
+  background-color: var(--light-color);
 }
 
 @media screen and (max-width: 320px) {
@@ -196,6 +197,18 @@ header .list-links li a:hover {
 header .list-links li a:hover::after {
   width: 100%;
   background-color: var(--first-color);
+}
+
+.header__icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.header__icons i {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
 .icon {

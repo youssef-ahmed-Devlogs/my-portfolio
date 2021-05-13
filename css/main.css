@@ -418,6 +418,77 @@ header .list-links li a:hover::after {
   }
 }
 
+/* ==== PORTFOLIO ==== */
+.portfolio__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.portfolio__box {
+  position: relative;
+  border-bottom: 3px solid var(--first-color);
+  border-radius: 0.5rem;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.portfolio__img {
+  overflow: hidden;
+}
+
+.portfolio__img img {
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.portfolio__box-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: var(--transition);
+  transition-delay: 0.1s;
+}
+
+.portfolio__box-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 0;
+  background-color: rgba(64, 112, 244, 0.5);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.portfolio__box:hover .portfolio__box-overlay::after {
+  height: 100%;
+}
+
+.portfolio__box:hover .portfolio__box-overlay {
+  opacity: 1;
+}
+
+.portfolio__box:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.work__name {
+  text-transform: uppercase;
+}
+
 /* ==== CSS CLASESS ==== */
 a {
   text-decoration: none;

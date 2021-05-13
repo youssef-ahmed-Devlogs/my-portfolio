@@ -48,3 +48,6 @@ sr.reveal(".about__info", { delay: 200 });
 // SKILLS SCROLL REVEAL
 sr.reveal(".skills__progress", { interval: 200 });
 sr.reveal(".skills__img", { delay: 200 });
+
+// PORTFOLIO SCROLL REVEAL
+sr.reveal(".portfolio__box", { interval: 200 });

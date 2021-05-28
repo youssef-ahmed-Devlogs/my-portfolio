@@ -45,12 +45,6 @@ sr.reveal(".home__social a", { interval: 200 });
 sr.reveal(".about__img", {});
 sr.reveal(".about__info", { delay: 200 });
 
-// SKILLS SCROLL REVEAL
-sr.reveal(".skills", {});
-
-// PORTFOLIO SCROLL REVEAL
-sr.reveal(".portfolio", {});
-
 // DARK MODE SETTINGS
 let modeToggle = document.getElementById("dark-mode-toggle");
 let dark_on = localStorage.getItem("dark_on")

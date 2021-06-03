@@ -297,8 +297,9 @@ header .list-links li a:hover::after {
 
 @media (max-width: 1200px) {
   .home-desc .home-social a.cv {
-    width: 31px;
-    height: 31px;
+    width: 29px;
+    height: 29px;
+    font-size: 12px;
   }
 }
 

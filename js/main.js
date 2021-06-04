@@ -50,7 +50,7 @@ modeToggle.addEventListener("click", (e) => {
 // SET MODE AFTER RELOAD PAGE FROM LOCAL STORAGE
 if (dark_on) {
   setMode(light, dark, true);
-  modeToggle.classList.toggle("bxs-sun");
+  modeToggle.classList.toggle("bxs-moon");
 }
 
 // DISPLAY SKILLS

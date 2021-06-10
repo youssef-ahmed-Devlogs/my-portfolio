@@ -32,6 +32,7 @@ let modeToggle = document.getElementById("dark-mode-toggle");
 let dark_on = localStorage.getItem("dark_on")
   ? JSON.parse(localStorage.getItem("dark_on"))
   : false;
+
 let dark = "#051e34";
 let light = "#f6f7f9";
 
@@ -39,7 +40,7 @@ const setMode = (colorLight, colorDark, darkOn) => {
   document.documentElement.style.setProperty("--second-color", colorLight);
   document.documentElement.style.setProperty("--light-color", colorDark);
   dark_on = darkOn;
-  localStorage.setItem("dark_on", dark_on);
+  localStorage.setItem("dark_on", JSON.stringify(dark_on));
 };
 
 modeToggle.addEventListener("click", (e) => {
@@ -50,7 +51,7 @@ modeToggle.addEventListener("click", (e) => {
 // SET MODE AFTER RELOAD PAGE FROM LOCAL STORAGE
 if (dark_on) {
   setMode(light, dark, true);
-  modeToggle.classList.toggle("bxs-moon");
+  modeToggle.classList.toggle("bxs-sun");
 }
 
 // DISPLAY SKILLS
@@ -106,6 +107,11 @@ let projects = [
     name: "professional Todolist react app",
     img: "images/react-todolist-app.jpg",
     link: "https://react-todolist-complete.netlify.app/",
+  },
+  {
+    name: "one store e-commerce",
+    img: "images/one-store.jpg",
+    link: "https://one-store.netlify.app/",
   },
   {
     name: "room store home page",
